@@ -11,8 +11,8 @@ var express = require('express')
   , logger = require('morgan')
   , methodOverride = require('method-override');
 
-var app = express();
-
+var app = express();//ахаха негры
+var a = 0;
 app.set('port', process.env.PORT || 3000);
 app.use(favicon(__dirname + '/public/images/favicon.png'));
 app.use(logger('dev'));
