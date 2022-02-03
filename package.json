@@ -2,13 +2,14 @@
   "name": "nodebootstraper",
   "version": "5.0.0",
   "dependencies": {
-    "express": "*",
-    "pug": "*",
-    "stylus": "*",
-    "serve-favicon": "*",
-    "morgan": "*",
     "body-parser": "*",
-    "method-override": "*"
+    "express": "*",
+    "image-to-base64": "github:renanbastos93/image-to-base64",
+    "method-override": "*",
+    "morgan": "*",
+    "pug": "*",
+    "serve-favicon": "*",
+    "stylus": "*"
   },
   "engines": {
     "node": "*",

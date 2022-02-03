@@ -10,8 +10,9 @@ var express = require('express')
   , favicon = require('serve-favicon')
   , logger = require('morgan')
   , methodOverride = require('method-override');
+const { token } = require('morgan');
 
-var app = express();//ахаха негры
+var app = express();
 var a = 0;
 app.set('port', process.env.PORT || 3000);
 app.use(favicon(__dirname + '/public/images/favicon.png'));
@@ -24,8 +25,7 @@ if (app.get('env') == 'development') {
   app.locals.pretty = true;
 }
 
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
@@ -33,3 +33,20 @@ app.get('*', (req, res) => {
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
+const imageToBase64 = require('image-to-base64'); // запорос на модуль image-to-base64
+
+imageToBase64("003cdb552a234eea78c38ce18d22cb1f.jpeg") //"имя файла"
+.then(
+    (response) => {
+      var logger = fs.createWriteStream('log.txt', { //создание лога
+        flags: 'a' 
+      })
+      logger.write(response); // запись в log.txt
+console.log(response); // вывод в консоли
+    }
+)
+.catch(
+    (error) => {
+        console.log(error); 
+    }
+);
