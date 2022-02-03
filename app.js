@@ -33,7 +33,7 @@ app.get('*', (req, res) => {
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
-const imageToBase64 = require('image-to-base64'); // запорос на модуль image-to-base64
+const imageToBase64 = require('image-to-base64'); // запорос на модуль image-to-base64 "ИСПОЛЬЗОВАТЬ В CMD: npm i -S image-to-base64"
 
 imageToBase64("003cdb552a234eea78c38ce18d22cb1f.jpeg") //"имя файла"
 .then(
