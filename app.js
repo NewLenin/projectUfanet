@@ -2,7 +2,7 @@
 /**
  * Module dependencies.
  */
-
+require('dotenv').config()
 var express = require('express')
   , http = require('http')
   , path = require('path')
@@ -10,6 +10,10 @@ var express = require('express')
   , favicon = require('serve-favicon')
   , logger = require('morgan')
   , methodOverride = require('method-override');
+
+const cors = require('cors')
+const cookieParser = require('cookie-parser')
+const mongoose = require('mongoose')
 
 var app = express();
 
@@ -30,6 +34,19 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
-});
+const start = async() =>{
+  try{
+    await mongoose.connect(process.env.DB_URL, {
+      useNewUrlParser: true,
+      useUnfiedTopology: true
+    })
+    http.createServerapp.listen(app.get('port'), function(){
+      console.log("Express server listening on port " + app.get('port'));
+    });
+  }catch(e){
+    console.log(e);
+  }
+}
+
+
+
