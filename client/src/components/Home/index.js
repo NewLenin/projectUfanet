@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
-import './style.css';
+import React, { Component } from "react";
+import "./style.css";
 
 class Home extends Component {
   render() {
     return (
-      <div class="container"><h1>Привет</h1></div>
-    )
+      <div>
+        <div className="back">
+
+        </div>{" "}
+      </div>
+    );
   }
 }
 

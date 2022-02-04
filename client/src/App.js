@@ -19,7 +19,7 @@ class App extends Component {
         <Header/>
 
         <main className="flex-shrink-0">
-          <div className="container">
+          <div>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
