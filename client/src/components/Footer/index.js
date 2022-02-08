@@ -7,9 +7,11 @@ import 'bootstrap/dist/js/bootstrap.js';
 class Footer extends Component {
   render() {
     return (
-      <footer className="footer mt-auto py-3 bg-light">
-
-      </footer>
+      <div class="backf">
+  <footer class="py-3 my-4">
+    <p class="text-center text-muted">© 2022 Practicant, Inc</p>
+  </footer>
+</div>
     )
   }
 }

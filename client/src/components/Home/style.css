@@ -4,10 +4,10 @@
     box-sizing: 0;
 }
 
-.back {
+#back {
     background: rgb(255, 138, 12);
     background: radial-gradient(circle, rgba(255, 138, 12, 1) 0%, rgba(252, 146, 70, 1) 100%);
-    height: 935px;
+    height: 800px;
     width: 1920px;
 }
 
