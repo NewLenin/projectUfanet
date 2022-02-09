@@ -1,0 +1,17 @@
+.forma{
+    width: 20px;
+
+}
+.form-control.forma{
+    width: 405px;
+    height: 38px;
+    margin-left: 1%;
+}
+.imgForm{
+   
+    width: 100%;
+    height: 400px;
+    background-color: rgb(138, 137, 136);
+    border-color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
