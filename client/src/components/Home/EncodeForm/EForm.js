@@ -11,13 +11,13 @@ const EForm = () => {
               className="form-control"
               placeholder="Leave a comment here"
               id="floatingTextarea2"
-              style={{ height: "100px" }}
+              style={{ height: "400px" }}
               defaultValue={""}
             />
             <label htmlFor="floatingTextarea2">Введите base64 код</label>
           </div><br/>
-          <button type="submit" class="btn btn-primary">
-            Submit
+          <button type="submit" class="btn btn-dark">
+            Конвертировать
           </button>
         </fieldset>
       </form>
