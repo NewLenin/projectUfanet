@@ -11,11 +11,29 @@ var express = require('express')
   , logger = require('morgan')
   , methodOverride = require('method-override');
 
-const cors = require('cors')
-const cookieParser = require('cookie-parser')
-const mongoose = require('mongoose')
-
+const jwt = require('jsonwebtoken');
+const { nextTick } = require('process');
 var app = express();
+
+app.use(express.json())
+
+
+
+const posts =[
+  {
+    username: 'beba',
+    title: 'Post 1'
+  },
+  {
+    username: 'aaaa',
+    title: 'Post 2'
+  }
+]
+
+
+
+
+
 
 app.set('port', process.env.PORT || 3000);
 app.use(favicon(__dirname + '/public/images/favicon.png'));
@@ -30,23 +48,48 @@ if (app.get('env') == 'development') {
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
+app.get('/posts',authToken, (req, res) => {
+  res.json(posts.filter(post => post.username === req.user.name))
+})
 
-const start = async() =>{
-  try{
-    await mongoose.connect(process.env.DB_URL, {
-      useNewUrlParser: true,
-      useUnfiedTopology: true
-    })
-    http.createServerapp.listen(app.get('port'), function(){
-      console.log("Express server listening on port " + app.get('port'));
-    });
-  }catch(e){
-    console.log(e);
-  }
+
+app.post('/login', (req, res) => {
+  const username = req.body.username
+  const user = { name: username }
+
+  const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET)
+  res.json({ accessToken: accessToken})
+})
+
+
+function authToken(req, res, next) {
+  const authHeader = req.headers['auth']
+  const token = authHeader && authHeader.split(' ')[1]
+  if (token == null) return res.sendStatus(401)
+  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+    if (err) return console.log(token)
+    req.user = user
+    next()
+  })
+  
 }
 
 
 
+
+
+
+
+
+
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+
+
+
+
+http.createServer(app).listen(app.get('port'), function(){
+  console.log("Express server listening on port " + app.get('port'));
+});
