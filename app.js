@@ -11,13 +11,18 @@ var express = require('express')
   , logger = require('morgan')
   , methodOverride = require('method-override');
 
+
+
+const authRouter = require('./authRouter.js');
+const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const { nextTick } = require('process');
 var app = express();
 
-app.use(express.json())
+app.use(express.json());
+app.use("/aut", authRouter);
 
-
+mongoose.connect('mongodb+srv://lil_ilich:05032003@cluster0.kntps.mongodb.net/Authorization?retryWrites=true&w=majority');
 
 const posts =[
   {
@@ -28,11 +33,7 @@ const posts =[
     username: 'aaaa',
     title: 'Post 2'
   }
-]
-
-
-
-
+];
 
 
 app.set('port', process.env.PORT || 3000);
@@ -49,38 +50,37 @@ if (app.get('env') == 'development') {
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
 app.get('/posts',authToken, (req, res) => {
-  res.json(posts.filter(post => post.username === req.user.name))
+  res.json(posts.filter(post => post.username === req.user.name));
+});
+
+
+app.post('/reg', (req, res)=>{
+  const username = req.body.name;
+  console.log(username);
 })
 
 
 app.post('/login', (req, res) => {
-  const username = req.body.username
-  const user = { name: username }
+  const username = req.body.username;
+  const user = { name: username };
 
-  const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET)
-  res.json({ accessToken: accessToken})
+  const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
+  res.json({ accessToken: accessToken});
+  console.log(req);
 })
 
 
 function authToken(req, res, next) {
-  const authHeader = req.headers['auth']
-  const token = authHeader && authHeader.split(' ')[1]
-  if (token == null) return res.sendStatus(401)
+  const authHeader = req.headers['auth'];
+  const token = authHeader && authHeader.split(' ')[1];
+  if (token == null) return res.sendStatus(401);
   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
-    if (err) return console.log(token)
-    req.user = user
-    next()
+    if (err) return console.log(token);
+    req.user = user;
+    next();
   })
   
 }
-
-
-
-
-
-
-
-
 
 
 app.get('*', (req, res) => {
