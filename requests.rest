@@ -1,32 +1,7 @@
-
-
-GET http://localhost:3000/posts
-Auth:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYmViYSIsImlhdCI6MTY0NDQ3MzYxNn0.Bt8qRZxCUARipu5UgnHjW1pxdMjx4MPzApweZF7_kR8
-
-
-###
-
-
-POST http://localhost:3000/login
+POST http://localhost:5000/auth/reg
 Content-Type: application/json
 
 {
-    "username" : "beba"
-}
-
-###
-
-POST http://localhost:3000/aut/users
-
-Content-Type:application/json
-{
-    "name" : "aaaasasasaa",
-    "password": "Ilich"
-}
-###
-POST http://localhost:3000/reg
-
-Content-Type: application/json
-{
-    "name": "aaaa"
+    "username": "12s1",
+    "password": "s21a"
 }

@@ -20,7 +20,7 @@ const { nextTick } = require('process');
 var app = express();
 
 app.use(express.json());
-app.use("/aut", authRouter);
+app.use("/auth", authRouter);
 
 mongoose.connect('mongodb+srv://lil_ilich:05032003@cluster0.kntps.mongodb.net/Authorization?retryWrites=true&w=majority');
 
@@ -55,7 +55,7 @@ app.get('/posts',authToken, (req, res) => {
 
 
 app.post('/reg', (req, res)=>{
-  const username = req.body.name;
+  const username = req;
   console.log(username);
 })
 

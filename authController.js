@@ -3,22 +3,20 @@ const bcrypt = require("bcryptjs");
 
 class authController {
   async reg(req, res) {
-    // try{
-    //     const {name, password} = req.body;
-    //     const gosti = await User.findOne({name: name})
-    //     if (gosti){
-    //         console.log(req);
-    //         return res.status(400).json({message: 'Уже есть такой пользователь'})
-    //     }
-    //     const hashPassword = bcrypt.hashSync(password, 7);
-    //     const user = new user({name, password:hashPassword})
-    //     await user.save()
-    //     return res.json({message: 'Ты зарегался'})
-    // }catch(e){
-    //     console.log(e)
-    //     res.status(400).json({message: 'Ошибка регистрации'})
-    // }
-    console.log(req);
+    try{
+        const {username, password} = req.body;
+        const gosti = await User.findOne({ username})
+        if (gosti){
+            return res.status(400).json({message: 'Уже есть такой пользователь'})
+        }
+        const hashPassword = bcrypt.hashSync(password, 7);
+        const user = new User({username, password:hashPassword})
+        await user.save()
+        return res.json({message: 'Ты зарегался'})
+    }catch(e){
+        console.log(req.body)
+        res.status(400).json({message: 'Ошибка регистрации'})
+    }
   }
 
   async login(req, res) {
