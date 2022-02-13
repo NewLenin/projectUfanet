@@ -1,3 +1,4 @@
+import { append } from 'express/lib/response';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
@@ -8,6 +9,7 @@ import './index.css';
 
 import registerServiceWorker from './registerServiceWorker';
 
+
 ReactDOM.render(
   <BrowserRouter>
     <App />
@@ -16,3 +18,6 @@ ReactDOM.render(
 );
 
 registerServiceWorker();
+
+
+

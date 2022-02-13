@@ -15,12 +15,12 @@ class LiNavLink extends React.Component<any, {}> {
           return (
             <li className={"nav-item " + isActive ? [activeClassName, className].join(' ') : className} style={isActive ? { ...style, ...activeStyle } : style}>
               <Link className="nav-link" to={to} {...rest} />
-            </li>
+            </li>            
           )
         }}
       />
     );
-  }
+  } 
 }
 
 export default LiNavLink;

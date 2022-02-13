@@ -19,6 +19,7 @@ class Header extends Component {
               <LiNavLink activeClassName='active' to="/">Home</LiNavLink>
               <LiNavLink activeClassName='active' to="/about">About</LiNavLink>
               <LiNavLink activeClassName='active' to="/contact">Contact</LiNavLink>
+              
             </ul>
           </div>
         </div>
