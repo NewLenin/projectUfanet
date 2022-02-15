@@ -34,9 +34,10 @@ export default class FileBase64 extends React.Component {
         let fileInfo = {
    
           base64: reader.result,
-      
-        };
 
+        };
+        var a  = reader.result;
+        console.log(a);
      
         allFiles.push(fileInfo);
 
