@@ -48,17 +48,10 @@ if (app.get('env') == 'development') {
   app.locals.pretty = true;
 }
 
-// The "catchall" handler: for any request that doesn't
-// // match one above, send back React's index.html file.
+
 // app.get('/posts',authToken, (req, res) => {
 //   res.json(posts.filter(post => post.username === req.user.name));
 // });
-
-
-// app.post('/reg', (req, res)=>{
-//   const username = req;
-//   console.log(username);
-// })
 
 
 // app.post('/login', (req, res) => {

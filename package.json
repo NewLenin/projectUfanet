@@ -23,7 +23,7 @@
     "npm": "*"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   }
 }

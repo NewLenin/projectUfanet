@@ -34,7 +34,7 @@ class authController{
         }
     }
 
-    async login(req,res){
+    async login(req,res, next){
         try{
            const {name,password}=req.body
            const user=await User.findOne({name})
@@ -46,7 +46,9 @@ class authController{
             return res.status(400).json({message:'Введен неверный пароль'})
            }
            const token=generateAccessToken(user._id)
-           return res.json({token})
+           req.body = token
+          
+           next()
         } catch(e){
             console.log(e)
         }
@@ -54,12 +56,23 @@ class authController{
 
     async getUsers(req,res){
         try{
-            const users=await user.find()
-            console.log('server work well')
+            const users=await User.find()
+            res.json({users})
         } catch(e){
             console.log(e)
         }
     }
+
+    async logout(req,res){
+        try{
+            const token = "Вы вышли"
+            res.json({token})
+        } catch(e){
+            console.log(e)
+        }
+    }
+    
 }
+
 
 module.exports=new authController()
