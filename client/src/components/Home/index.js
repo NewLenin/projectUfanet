@@ -30,6 +30,7 @@ class Home extends Component {
         </button>
         <label className={"Text3"}>Image to Base64</label>
         <div className={"Line"}></div>
+        <button className={"But1"}><label className={"Text6"}>Downlowd</label></button>
         <div className={"Backf"}>
           <div>
             <div>
@@ -52,13 +53,13 @@ class Home extends Component {
             ></input>
 
             <div>
-              <form>
+              <form className={"Box1"}>
                 {this.state.files.map((file, i) => {
                   let baseStr64 = document.getElementById("baseStr64text")
                     .value;
                   return (
                     <img
-                      hidden
+                      
                       key={i}
                       src={"data:image/jpg;base64," + baseStr64}
                     />
