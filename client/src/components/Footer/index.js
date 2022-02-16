@@ -7,7 +7,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 class Footer extends Component {
   render() {
     return (
-      <div class="backf">
+      <div className='{backf}'>
   <footer class="py-3 my-4">
     <p class="text-center text-muted">© 2022 Practicant, Inc</p>
   </footer>

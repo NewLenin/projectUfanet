@@ -1,5 +1,6 @@
 
 import React from 'react';
+import "./style.css";
 
 export default class FileBase64 extends React.Component {
 
@@ -56,7 +57,7 @@ export default class FileBase64 extends React.Component {
 
   render() {
     return (
-      <input
+      <input 
         type="file"
         onChange={ this.handleChange.bind(this) }
         multiple={ this.props.multiple } />
