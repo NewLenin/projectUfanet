@@ -42,7 +42,7 @@ export default class FileBase64 extends React.Component {
       <React.Fragment>
         <input
           
-          className={"custom-file-input"}
+className={"custom-file-input"}
           type="file"
           onChange={this.handleChange.bind(this)}
           multiple={this.props.multiple}
