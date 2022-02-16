@@ -1,9 +1,9 @@
 .navbar {
     position: absolute;
-    width   : 1903px;
-    height  : 103px;
+    width: 1903px;
+    height: 103px;
 
-    background    : #4B4B4B;
+    background: #4B4B4B;
     mix-blend-mode: difference;
 }
 
@@ -12,17 +12,18 @@
 .Text1 {
 
     position: absolute;
-    width   : 647px;
-    height  : 73px;
+    width: 647px;
+    height: 73px;
 
 
     font-family: Share;
-    font-style : normal;
+    font-style: normal;
     font-weight: normal;
-    font-size  : 72px;
+    font-size: 72px;
     line-height: 81px;
-    color      : #FFDEDE;
-    left       : 38%;
+    color: #FFDEDE;
+    left: 36%;
+    top: 1%;
 
 
     mix-blend-mode: normal;
@@ -30,27 +31,27 @@
 
 .Log {
     position: absolute;
-    width   : 229px;
-    height  : 56px;
+    width: 229px;
+    height: 56px;
 
-    background    : #C4C4C4;
+    background: #C4C4C4;
     mix-blend-mode: overlay;
-    border-radius : 12px;
-    left          : 4%;
-    top           : 3%;
+    border-radius: 12px;
+    left: 4%;
+    top: 3%;
 }
 
 .Text2 {
     position: absolute;
-    width   : 194px;
-    height  : 44px;
-    left    : 6%;
-    top     : 3%;
+    width: 194px;
+    height: 44px;
+    left: 6%;
+    top: 3%;
 
     font-family: Share;
-    font-style : normal;
+    font-style: normal;
     font-weight: normal;
-    font-size  : 40px;
+    font-size: 40px;
     line-height: 54px;
 
     color: #000000;
@@ -58,61 +59,77 @@
 
 .Text3 {
     position: absolute;
-    width   : 423px;
-    height  : 134px;
+    width: 423px;
+    height: 134px;
 
     font-family: Share;
-    font-style : normal;
+    font-style: normal;
     font-weight: normal;
-    font-size  : 72px;
+    font-size: 72px;
     line-height: 81px;
-    left       : 110px;
-    top        : 220px;
+    left: 110px;
+    top: 220px;
 
     color: #000000;
 }
 
 .Pr {
     position: absolute;
-    width   : 267px;
-    height  : 91px;
+    width: 267px;
+    height: 91px;
 
-    background   : #ACACAC;
-    border       : 1px solid #000000;
-    box-sizing   : border-box;
-    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #ACACAC;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
-    top          : 250px;
-    left         : 450px;
+    top: 250px;
+    left: 450px;
+
 
 }
 
 .Box {
+
     position: absolute;
-    width   : 994px;
-    height  : 554px;
+    width: 994px;
+    height: 554px;
     background: #FFFFFF;
     border: 10px solid rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     top: 200px;
     left: 800px;
-    
+
 }
 
+.Box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+.Code64 {
+    position: absolute;
+    width: 1228px;
+    height: 222px;
+    top: 850px;
+    left: 346px;
+
+    background: #FFFFFF;
+}
 
 * {
-    margin    : 0;
-    padding   : 0;
+    margin: 0;
+    padding: 0;
     box-sizing: 0;
 }
 
 .Backf {
 
-    width : 1903px;
+    width: 1903px;
     height: 2487.69px;
 
-    background: url(C:\Users\niker\Ufanet\projectUfanet\client\public\Backf.jpg);
+    background: url(C:\Users\Pupil\Desktop\Ufanet\projectUfanet\client\public\Backf.jpg);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 
@@ -126,15 +143,65 @@
 
 .imgForm {
 
-    width           : 100%;
-    height          : 400px;
+    width: 100%;
+    height: 400px;
     background-color: rgb(138, 137, 136);
-    border-color    : rgb(0, 0, 0);
-    margin-bottom   : 10px;
+    border-color: rgb(0, 0, 0);
+    margin-bottom: 10px;
 }
 
 .photo {
 
-    width : 400px;
+    width: 400px;
     height: 100px;
+}
+
+.custom-file-input {
+    color: transparent;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    content: 'Выберите файл';
+    color: black;
+    display: inline-block;
+    background: #ACACAC;
+
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    position: absolute;
+    width: 264px;
+    height: 89px;
+
+    font-family: Share;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    padding-top: 8%;
+    padding-left: 11%;
+
+
+    color: #000000;
+
+}
+
+.custom-file-input:hover::before {
+    border-color: black;
+}
+
+.custom-file-input:active {
+    outline: 0;
+}
+
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }

@@ -40,17 +40,18 @@ class Home extends Component {
                 {this.state.files.map((file, i) => {
                   return <img key={i} src={file.base64} />;
                 })}
-                <img src="" />
+                
               </div>
             </div>
             <div className=""></div>
             <input
-              type="text"
+              type="text" hidden
               id="baseStr64text"
               name="baseStr64text"
             ></input>
+
             <div className="container">
-              {" "}
+              
               <form>
                 {this.state.files.map((file, i) => {
                   let baseStr64 = document.getElementById("baseStr64text")
@@ -63,16 +64,15 @@ class Home extends Component {
                   ); //реализуйте вывод пж из base64 в картинку
                 })}
 
-                <img src="" />
+
               </form>
 
             </div>
             {this.state.files.length != 0 ? (
-              <div>
-                <h3 className="text-center mt-25">Вывод</h3>
+              
                 <div className="pre-container">
                   <textarea
-                    class="form-control"
+                    className={"Code64"}
                     placeholder="Leave a comment here"
                     id="floatingTextarea2"
                     style={{ height: 400 }}
@@ -80,7 +80,7 @@ class Home extends Component {
                     {JSON.stringify(this.state.files[0].base64)}
                   </textarea>
                 </div>
-              </div>
+              
             ) : null}
           </div>
         </div>
