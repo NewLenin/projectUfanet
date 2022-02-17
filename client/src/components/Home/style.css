@@ -75,19 +75,6 @@
 
 .Text4 {
     position: absolute;
-<<<<<<< HEAD
-    width: 57px;
-    height: 26px;
-
-    font-family: Share;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 34px;
-
-    color: #000000;
-    right: 35px;
-=======
     width   : 57px;
     height  : 26px;
 
@@ -99,26 +86,11 @@
 
     color : #000000;
     right : 35px;
->>>>>>> e2c936db136fdf3ca462d22210c0502c71a389dd
     bottom: 10px;
 }
 
 .Text5 {
     position: absolute;
-<<<<<<< HEAD
-    width: 423px;
-    height: 134px;
-
-    font-family: Share;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 72px;
-    line-height: 81px;
-
-    color: #000000;
-    top: 1200px;
-    left: 110px;
-=======
     width   : 423px;
     height  : 134px;
 
@@ -148,7 +120,6 @@
     color: #000000;
     right : 15px;
     top:  10px;
->>>>>>> e2c936db136fdf3ca462d22210c0502c71a389dd
 }
 
 .Pr {
@@ -186,28 +157,6 @@
     object-fit: cover;
 }
 
-<<<<<<< HEAD
-.Code64 {
-    position: relative;
-    width: 1228px;
-    height: 222px;
-    top: 850px;
-    left: 346px;
-    outline: none;
-    z-index: 0;
-   
-    resize: none;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    word-break: break-all;
-    background: #FFFFFF;
-}
-
-.Encode64 {
-    position: absolute;
-    width: 1274px;
-    height: 253px;
-=======
 .Box1 {
     position: absolute;
     width   : 1333px;
@@ -220,7 +169,8 @@
 }
 
 .Code64 {
-    position: relative;
+    position: absolute;
+
     width   : 1228px;
     height  : 222px;
     top     : 850px;
@@ -228,11 +178,11 @@
     outline : none;
     z-index : 0;
     resize  : none;
->>>>>>> e2c936db136fdf3ca462d22210c0502c71a389dd
-
+    word-break: break-all;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background: #FFFFFF;
-    top: 1400px;
-    left: 330px;
+
 }
 
 .Line {
@@ -251,7 +201,8 @@
     position: absolute;
     width   : 1228px;
     height  : 222px;
-
+    overflow-y: scroll;
+    word-break: break-all;
     background: #FFFFFF;
     top       : 1400px;
     left      : 346px;
@@ -279,11 +230,7 @@
     width : 1903px;
     height: 2700px;
 
-<<<<<<< HEAD
     background: url(C:\Users\Pupil\Desktop\proj\projectUfanet\client\public\Backf.jpg);
-=======
-    background: url(C:\Users\niker\Ufanet\projectUfanet\client\public\Backf.jpg);
->>>>>>> e2c936db136fdf3ca462d22210c0502c71a389dd
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 
@@ -312,19 +259,6 @@
 
 .Copy {
     position: relative;
-<<<<<<< HEAD
-    width: 125px;
-    height: 42px;
-    z-index: 500;
-
-    background: #ACACAC;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    top: 905px;
-    left: 1420px;
-=======
     width   : 125px;
     height  : 42px;
     z-index : 500;
@@ -336,7 +270,6 @@
     border-radius: 8px;
     top          : 905px;
     left         : 1420px;
->>>>>>> e2c936db136fdf3ca462d22210c0502c71a389dd
 }
 
 
@@ -366,19 +299,11 @@
     width              : 264px;
     height             : 89px;
 
-<<<<<<< HEAD
-    font-family: Share;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    padding-top: 8%;
-=======
     font-family : Share;
     font-style  : normal;
     font-weight : 500;
     font-size   : 30px;
     padding-top : 8%;
->>>>>>> e2c936db136fdf3ca462d22210c0502c71a389dd
     padding-left: 11%;
 
 
