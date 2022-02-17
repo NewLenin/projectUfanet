@@ -1,5 +1,6 @@
-import React from "react";
+import React, {Component} from "react";
 import "./style.css";
+
 
 export default class FileBase64 extends React.Component {
   constructor(props) {
@@ -8,14 +9,19 @@ export default class FileBase64 extends React.Component {
       files: [],
     };
   }
-
+  // logs(){
+  //   var test = document.getElementById("baseStr64text")
+  //   test.onkeyup=function(){
+  //     console.log(test.value)
+  //   }
+  // }
   handleChange(e) {
     let files = e.target.files;
 
     var allFiles = [];
     for (var i = 0; i < files.length; i++) {
       let file = files[i];
-
+      
       let reader = new FileReader();
 
       reader.readAsDataURL(file);
@@ -42,7 +48,7 @@ export default class FileBase64 extends React.Component {
       <React.Fragment>
         <input
           
-          className={"custom-file-input"}
+className={"custom-file-input"}
           type="file"
           onChange={this.handleChange.bind(this)}
           multiple={this.props.multiple}
