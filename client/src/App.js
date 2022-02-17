@@ -6,6 +6,8 @@ import { Route } from 'react-router';
 import Home from './components/Home';
 
 import './App.css';
+
+
 import ReactDOM from 'react-dom';
 
 import FileBase64 from './react-file-base64.js';
@@ -26,7 +28,9 @@ class App extends Component {
   render() {
     return (
       <Router>
+
         <Home/>
+        
       </Router>
     )
   }
