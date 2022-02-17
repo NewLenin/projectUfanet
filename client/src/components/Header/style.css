@@ -1,0 +1,8 @@
+.navbar {
+    position: absolute;
+    width   : 1903px;
+    height  : 160px;
+
+    background    : #4B4B4B;
+    mix-blend-mode: difference;
+}

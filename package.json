@@ -2,6 +2,7 @@
   "name": "nodebootstraper",
   "version": "5.0.0",
   "dependencies": {
+<<<<<<< HEAD
     "bcryptjs": "^2.4.3",
     "body-parser": "*",
     "cors": "^2.8.5",
@@ -15,6 +16,16 @@
     "nodemon": "^2.0.15",
     "pug": "*",
     "routes": "^2.1.0",
+=======
+    "body-parser": "*",
+    "express": "*",
+    "express-fileupload": "^1.3.1",
+    "image-to-base64": "^2.2.0",
+    "method-override": "*",
+    "morgan": "*",
+    "nodemon": "^2.0.15",
+    "pug": "*",
+>>>>>>> origin/feature/backend
     "serve-favicon": "*",
     "stylus": "*"
   },

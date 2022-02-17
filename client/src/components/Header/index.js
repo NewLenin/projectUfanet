@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import LiNavLink from '../LiNavLink';
+
 
 import './style.css';
 
+<<<<<<< HEAD
 class Header extends Component {
   render() {
     return (
@@ -28,5 +29,7 @@ class Header extends Component {
     )
   }
 }
+=======
+>>>>>>> origin/feature/backend
 
 export default Header;

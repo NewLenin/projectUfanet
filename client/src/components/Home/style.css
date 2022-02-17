@@ -1,0 +1,399 @@
+.navbar {
+    position: absolute;
+    width   : 1903px;
+    height  : 103px;
+
+    background    : #4B4B4B;
+    mix-blend-mode: overlay;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Share&display=swap');
+
+.Text1 {
+
+    position: absolute;
+    width   : 647px;
+    height  : 73px;
+
+
+    font-family: Share;
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 72px;
+    line-height: 81px;
+    color      : #FFDEDE;
+    left       : 36%;
+    top        : 1%;
+
+
+    mix-blend-mode: normal;
+}
+
+.Log {
+    position: absolute;
+    width   : 229px;
+    height  : 56px;
+
+    background    : #C4C4C4;
+    mix-blend-mode: overlay;
+    border-radius : 12px;
+    left          : 4%;
+    top           : 3%;
+}
+
+.Text2 {
+    position: absolute;
+    width   : 194px;
+    height  : 44px;
+    left    : 6%;
+    top     : 3%;
+
+    font-family: Share;
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 40px;
+    line-height: 54px;
+
+    color: #000000;
+}
+
+.Text3 {
+    position: absolute;
+    width   : 423px;
+    height  : 134px;
+
+    font-family: Share;
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 72px;
+    line-height: 81px;
+    left       : 110px;
+    top        : 220px;
+
+    color: #000000;
+}
+
+.Text4 {
+    position: absolute;
+<<<<<<< HEAD
+    width: 57px;
+    height: 26px;
+
+    font-family: Share;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 34px;
+
+    color: #000000;
+    right: 35px;
+=======
+    width   : 57px;
+    height  : 26px;
+
+    font-family: Share;
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 30px;
+    line-height: 34px;
+
+    color : #000000;
+    right : 35px;
+>>>>>>> e2c936db136fdf3ca462d22210c0502c71a389dd
+    bottom: 10px;
+}
+
+.Text5 {
+    position: absolute;
+<<<<<<< HEAD
+    width: 423px;
+    height: 134px;
+
+    font-family: Share;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 81px;
+
+    color: #000000;
+    top: 1200px;
+    left: 110px;
+=======
+    width   : 423px;
+    height  : 134px;
+
+    font-family: Share;
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 72px;
+    line-height: 81px;
+
+    color: #000000;
+    top  : 1200px;
+    left : 110px;
+}
+
+.Text6 {
+
+    position: absolute;
+    width   : 119px;
+    height  : 28px;
+
+    font-family: Share;
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 30px;
+    line-height: 34px;
+
+    color: #000000;
+    right : 15px;
+    top:  10px;
+>>>>>>> e2c936db136fdf3ca462d22210c0502c71a389dd
+}
+
+.Pr {
+    position: absolute;
+    width   : 267px;
+    height  : 91px;
+
+    background   : #ACACAC;
+    border       : 1px solid #000000;
+    box-sizing   : border-box;
+    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    top          : 250px;
+    left         : 450px;
+
+
+}
+
+.Box {
+
+    position  : absolute;
+    width     : 994px;
+    height    : 554px;
+    background: #FFFFFF;
+    border    : 10px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    top       : 200px;
+    left      : 800px;
+
+}
+
+.Box img {
+    width     : 100%;
+    height    : 100%;
+    object-fit: cover;
+}
+
+<<<<<<< HEAD
+.Code64 {
+    position: relative;
+    width: 1228px;
+    height: 222px;
+    top: 850px;
+    left: 346px;
+    outline: none;
+    z-index: 0;
+   
+    resize: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    word-break: break-all;
+    background: #FFFFFF;
+}
+
+.Encode64 {
+    position: absolute;
+    width: 1274px;
+    height: 253px;
+=======
+.Box1 {
+    position: absolute;
+    width   : 1333px;
+    height  : 705px;
+
+    background   : #C4C4C4;
+    border-radius: 8px;
+    top          : 1900px;
+    left         : 292px;
+}
+
+.Code64 {
+    position: relative;
+    width   : 1228px;
+    height  : 222px;
+    top     : 850px;
+    left    : 346px;
+    outline : none;
+    z-index : 0;
+    resize  : none;
+>>>>>>> e2c936db136fdf3ca462d22210c0502c71a389dd
+
+    background: #FFFFFF;
+    top: 1400px;
+    left: 330px;
+}
+
+.Line {
+    position: absolute;
+    width: 1565px;
+    height: 0px;
+    top: 1750px;
+    left: 170px;
+
+    border: 1px solid #000000;
+    transform: rotate(0.04deg)
+
+}
+
+.Encode64 {
+    position: absolute;
+    width   : 1228px;
+    height  : 222px;
+
+    background: #FFFFFF;
+    top       : 1400px;
+    left      : 346px;
+}
+
+.Line {
+    position: absolute;
+    width   : 1565px;
+    height  : 0px;
+    top     : 1750px;
+    left    : 170px;
+
+    border   : 1px solid #000000;
+    transform: rotate(0.04deg)
+}
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: 0;
+}
+
+.Backf {
+
+    width : 1903px;
+    height: 2700px;
+
+<<<<<<< HEAD
+    background: url(C:\Users\Pupil\Desktop\proj\projectUfanet\client\public\Backf.jpg);
+=======
+    background: url(C:\Users\niker\Ufanet\projectUfanet\client\public\Backf.jpg);
+>>>>>>> e2c936db136fdf3ca462d22210c0502c71a389dd
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+
+}
+
+.But1 {
+
+    position: absolute;
+    width   : 143px;
+    height  : 56px;
+
+    background   : #B8B4B4;
+    border       : 1px solid #000000;
+    box-sizing   : border-box;
+    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    top: 1954px;
+    left: 1444px;
+    z-index: 500;
+}
+
+#root {
+    display: flex;
+}
+
+.Copy {
+    position: relative;
+<<<<<<< HEAD
+    width: 125px;
+    height: 42px;
+    z-index: 500;
+
+    background: #ACACAC;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    top: 905px;
+    left: 1420px;
+=======
+    width   : 125px;
+    height  : 42px;
+    z-index : 500;
+
+    background   : #ACACAC;
+    border       : 1px solid #000000;
+    box-sizing   : border-box;
+    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    top          : 905px;
+    left         : 1420px;
+>>>>>>> e2c936db136fdf3ca462d22210c0502c71a389dd
+}
+
+
+.custom-file-input {
+    color: transparent;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    content   : 'Выберите файл';
+    color     : black;
+    display   : inline-block;
+    background: #ACACAC;
+
+    box-sizing   : border-box;
+    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+
+    outline            : none;
+    white-space        : nowrap;
+    -webkit-user-select: none;
+    cursor             : pointer;
+    position           : absolute;
+    width              : 264px;
+    height             : 89px;
+
+<<<<<<< HEAD
+    font-family: Share;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    padding-top: 8%;
+=======
+    font-family : Share;
+    font-style  : normal;
+    font-weight : 500;
+    font-size   : 30px;
+    padding-top : 8%;
+>>>>>>> e2c936db136fdf3ca462d22210c0502c71a389dd
+    padding-left: 11%;
+
+
+    color: #000000;
+
+}
+
+.custom-file-input:hover::before {
+    border-color: black;
+}
+
+.custom-file-input:active {
+    outline: 0;
+}
+
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
