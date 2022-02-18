@@ -182,10 +182,6 @@
     overflow-y: scroll;
     overflow-x: hidden;
     background: #FFFFFF;
-<<<<<<< HEAD
-=======
-
->>>>>>> 327b53fece6cfbd3d56ea31670ca90a801541d94
 }
 
 .Line {
@@ -233,11 +229,7 @@
     width : 1903px;
     height: 2700px;
 
-<<<<<<< HEAD
-    background: url(C:\Users\Pupil\Desktop\Ufanet\projectUfanet\client\public\Backf.jpg);
-=======
     background: url(C:\Users\Pupil\Desktop\proj\projectUfanet\client\public\Backf.jpg);
->>>>>>> 327b53fece6cfbd3d56ea31670ca90a801541d94
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 

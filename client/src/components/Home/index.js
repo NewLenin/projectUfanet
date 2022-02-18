@@ -46,8 +46,6 @@ class Home extends Component {
         <label className={"Text3"}>Image to Base64</label>
         <div className={"Line"}></div>
         <button className={"But1"}><label className={"Text6"}>Downlowd</label></button>
-<<<<<<< HEAD
-=======
         <div>
           <form className={"Box1"}>
 
@@ -66,7 +64,6 @@ class Home extends Component {
           id="baseStr64text"
           name="baseStr64text"
         ></textarea>
->>>>>>> 327b53fece6cfbd3d56ea31670ca90a801541d94
         <div className={"Backf"}>
           <div>
             <div>
@@ -80,7 +77,6 @@ class Home extends Component {
               </div>
             </div>
 
-<<<<<<< HEAD
             <input
             className={"Encode64"}
               type="text"
@@ -104,11 +100,6 @@ class Home extends Component {
                 })}
               </form>
             </div>
-=======
-
-
-
->>>>>>> 327b53fece6cfbd3d56ea31670ca90a801541d94
             <label className={"Text5"}>Base64 to Image</label>
             <button className={"Copy"} type="submit">
               <label className={"Text4"}>Copy</label>
@@ -120,11 +111,7 @@ class Home extends Component {
                   placeholder="Leave a comment here"
                   id="floatingTextarea2"
                 >
-<<<<<<< HEAD
-                  {JSON.stringify(this.state.files[0].base64)}
-=======
                   {JSON.stringify(this.state.files[0].base64).slice(1,-1)}
->>>>>>> 327b53fece6cfbd3d56ea31670ca90a801541d94
                 </div>
               </div>
             ) : null}
