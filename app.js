@@ -4,24 +4,61 @@
  */
 
 var express = require('express')
-  , fileupload = require("express-fileupload")
   , http = require('http')
-  , path = require('path')
   , bodyParser = require('body-parser')
+  , path = require('path')
+  ,  fileUpload = require('express-fileupload')
   , favicon = require('serve-favicon')
   , logger = require('morgan')
   , methodOverride = require('method-override');
 const { token } = require('morgan');
+var jsonParser = bodyParser.json();
+var productsRouter=express.Router();
+const authRouter = require("./routes/auth.routes")
+const fileRouter = require("./routes/file.routes")
+var cors = require('cors')
+
 const aaa = 0;
+
 var app = express();
+const mongoose =require("mongoose");
+const config = require("config");
+app.use("/api/auth", authRouter)
+app.use("/api/files", fileRouter)
+
 var a = 0;
+var jsonParser = bodyParser.json();
+var productsRouter=express.Router();
+app.use(cors())
+app.use(fileUpload({}));
 
-app.use(fileupload());
 
-app.set('port', process.env.PORT || 3001);
+
+const PORT =config.get('serverPort')
+
+const start= async ()=>{
+
+    try{
+     await mongoose.connect(config.get("dbUrl"),{
+      useNewUrlParser:true,
+      useUnifiedTopology:true
+     });
+        app.listen(PORT,()=>{
+
+            console.log('start',PORT);
+        });
+    }
+        catch(e){
+
+        }
+    }
+start()
+
+
+app.set('port', process.env.PORT || 3000);
 app.use(favicon(__dirname + '/public/images/favicon.png'));
 app.use(logger('dev'));
-app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'client/build')));
 
@@ -75,19 +112,19 @@ app.get('/crypt', (req, res) => {
 let buff = new Buffer(data, 'base64');// читаем, выставлем кодировку  
 fs.writeFileSync('image.png', buff);//создание и запись
 
-app.post('/sendImg', (req, res) => {
-  var file;
+// app.post('/sendImg', (req, res) => {
+//   var file;
 
-  if (!req.files) {
-    console.log('not ok');
-    // res.send("File was not found");
-    return;
-  }
+//   if (!req.files) {
+//     console.log('not ok');
+//     // res.send("File was not found");
+//     return;
+//   }
 
-  file = req.files.imgForm;  // here is the field name of the form
-  console.log('ok');
-  // res.send("File Uploaded");
-});
+//   file = req.files.imgForm;  // here is the field name of the form
+//   console.log('ok');
+//   // res.send("File Uploaded");
+// });
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
