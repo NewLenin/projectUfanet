@@ -1,0 +1,6 @@
+{
+    "serverPort":5000,
+    "dbUrl": "mongodb+srv://root:Mariska@cluster0.l8cqn.mongodb.net/Cluster0?retryWrites=true&w=majority",
+    "filePath": "C:\\Users\\maris\\Desktop\\backplusfront\\files", 
+     "secretKey": "text"
+}
