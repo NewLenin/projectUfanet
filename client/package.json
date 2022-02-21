@@ -4,16 +4,20 @@
   "private": true,
   "dependencies": {
     "@popperjs/core": "^2.6.0",
+    "axios": "^0.26.0",
     "bootstrap": "^5.0.0-beta1",
     "express": "^4.17.2",
+    "nodemon": "^2.0.15",
     "react": "^17.0.1",
     "react-create-app": "^2.0.4",
     "react-dom": "^17.0.1",
     "react-file-base64": "^1.0.3",
     "react-login-modal": "^1.2.1",
+    "react-redux": "^7.2.6",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^5.0.0",
+    "redux": "^4.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

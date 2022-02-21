@@ -1,26 +1,25 @@
-import * as React from 'react';
-import { Link, Route } from 'react-router-dom';
+import React from 'react';
+import './navbar.css'
 
-class LiNavLink extends React.Component<any, {}> {
-  render() {
-    const {to,exact, strict, activeClassName, className, activeStyle, style, isActive: getIsActive, ...rest } = this.props;
+import {NavLink} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {logout} from "../../reducers/userReducer";
+
+const Navbar = () => {
+    const isAuth = useSelector(state => state.user.isAuth)
+    const dispatch = useDispatch()
+
     return (
-      <Route
-        path={typeof to === 'object' ? to.pathname : to}
-        exact={exact}
-        strict={strict}
-        children={({ location, match }) => {
-          const isActive = !!(getIsActive ? getIsActive(match, location) : match)
-
-          return (
-            <li className={"nav-item " + isActive ? [activeClassName, className].join(' ') : className} style={isActive ? { ...style, ...activeStyle } : style}>
-              <Link className="nav-link" to={to} {...rest} />
-            </li>
-          )
-        }}
-      />
+        <div className="navbar">
+            <div className="container">
+               
+                <div className="navbar__header">MERN CLOUD</div>
+                {!isAuth && <div className="navbar__login"><NavLink to="/login">Войти</NavLink></div> }
+                {!isAuth && <div className="navbar__registration"><NavLink to="/registration">Регистрация</NavLink></div> }
+                {isAuth && <div className="navbar__login" onClick={() => dispatch(logout()) }>Выход</div> }
+            </div>
+        </div>
     );
-  }
-}
+};
 
-export default LiNavLink;
+export default Navbar;

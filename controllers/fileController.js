@@ -1,4 +1,3 @@
-
 const fileService = require('../service/fileService')
 const config = require('config')
 const fs = require('fs')
@@ -7,6 +6,7 @@ const User = require('../models/User')
 var express = require('express')
 const File = require('../models/File')
 var app = express();
+const imageToBase64 = require('image-to-base64');
 
 
 
@@ -14,10 +14,10 @@ var app = express();
 class FileController {
     async createDir(req, res) {
         try {
-            const {name, type, parent} = req.body
-            const file = new File({name, type, parent, user: req.user.id})
-            const parentFile = await File.findOne({_id: parent})
-            if(!parentFile) {
+            const { name, type, parent } = req.body
+            const file = new File({ name, type, parent, user: req.user.id })
+            const parentFile = await File.findOne({ _id: parent })
+            if (!parentFile) {
                 file.path = name
                 await fileService.createDir(file)
             } else {
@@ -36,11 +36,11 @@ class FileController {
 
     async getFiles(req, res) {
         try {
-            const files = await File.find({user: req.user.id, parent: req.query.parent})
+            const files = await File.find({ user: req.user.id, parent: req.query.parent })
             return res.json(files)
         } catch (e) {
             console.log(e)
-            return res.status(500).json({message: "Can not get files"})
+            return res.status(500).json({ message: "Can not get files" })
         }
     }
 
@@ -48,11 +48,11 @@ class FileController {
         try {
             const file = req.files.file
 
-            const parent = await File.findOne({user: req.user.id, _id: req.parent})
-            const user = await User.findOne({_id: req.user.id})
+            const parent = await File.findOne({ user: req.user.id, _id: req.parent })
+            const user = await User.findOne({ _id: req.user.id })
 
             if (user.usedSpace + file.size > user.diskSpace) {
-                return res.status(400).json({message: 'There no space on the disk'})
+                return res.status(400).json({ message: 'There no space on the disk' })
             }
 
             user.usedSpace = user.usedSpace + file.size
@@ -65,7 +65,7 @@ class FileController {
             }
 
             if (fs.existsSync(path)) {
-                return res.status(400).json({message: 'File already exist'})
+                return res.status(400).json({ message: 'File already exist' })
             }
             file.mv(path)
 
@@ -83,10 +83,33 @@ class FileController {
             await user.save()
 
             res.json(dbFile)
+            imageToBase64(path) // Path to the image
+                .then(
+                    (response) => {
+                       // console.log(response); // "cGF0aC90by9maWxlLmpwZw=="
+                        
+                     
+                        
+                            fs.writeFile(path+'.txt',response, function (err) {
+                                if (err) 
+                                    return console.log(err);
+                                console.log('Done');
+                            });
+                     
+                    }
+                )
+                .catch(
+                    (error) => {
+                        console.log(error); // Logs an error if there was one
+                    }
+                )
+
+
         } catch (e) {
             console.log(e)
-            return res.status(500).json({message: "Upload error"})
+         //   return res.status(500).json({ message: "Upload error" })
         }
+
     }
 }
 

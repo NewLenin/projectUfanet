@@ -14,7 +14,7 @@ const File = require('../models/File')
 var bodyParser = require('body-parser'); 
 router.use(bodyParser.json()); router.use(bodyParser.urlencoded({ extended: true }));
 const fileUpload = require('express-fileupload');
-router.use(fileUpload({})); // Don't forget this line!
+router.use(fileUpload({}));
 router.post('/registration',
     [
         check('email', "Uncorrect email").isEmail(),
