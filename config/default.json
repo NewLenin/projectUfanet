@@ -1,6 +1,6 @@
 {
     "serverPort":5000,
-    "dbUrl": "mongodb+srv://root:Mariska@cluster0.l8cqn.mongodb.net/Cluster0?retryWrites=true&w=majority",
-    "filePath": "C:\\Users\\maris\\Desktop\\backplusfront\\files", 
+    "dbUrl": "mongodb+srv://lil_ilich:05032003@cluster0.kntps.mongodb.net/Bebra?retryWrites=true&w=majority",
+    "filePath": "C:\\Users\\kiril\\Desktop\\projectUfanet\\files", 
      "secretKey": "text"
 }
