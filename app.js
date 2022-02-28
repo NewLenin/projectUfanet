@@ -25,6 +25,7 @@ var productsRouter = express.Router();
 app.use("/api/auth", authRouter)
 app.use("/api/files", fileRouter)
 var a = 0;
+var b = 0;
 var jsonParser = bodyParser.json();
 var productsRouter = express.Router();
 app.use(cors())

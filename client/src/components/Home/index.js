@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import "./style.css";
 
 
+
 import ReactDOM from "react-dom";
 
 import FileBase64 from "./react-file-base64.js";
-import Logreg from "./Modal.js"
+
 
 
 
@@ -17,6 +18,9 @@ class Home extends Component {
       text: "",
     };
   }
+ 
+
+
   handleChange(event) {
 
     let value = event.target.value;
@@ -29,6 +33,7 @@ class Home extends Component {
     this.setState({ files: files });
   }
 
+
   render() {
     return (
       <React.Fragment>
@@ -37,15 +42,22 @@ class Home extends Component {
         </nav>
         
 
-        <label className={"Text1"}>UfanetConverter</label>
+        <label className={"Text1"}>UfanetCaptcha</label>
+        <div>
+          
         <button className={"Log"} type="submit">
           
 
           <label className={"Text2"}>Log/Reg</label>
         </button>
-        <label className={"Text3"}>Image to Base64</label>
-        <div className={"Line"}></div>
-        <button className={"But1"}><label className={"Text6"}>Downlowd</label></button>
+        
+        </div>
+
+        <label className={"Text3"}>Go through the captcha</label>
+        <button className={"Send"} type="submit"><label className={"Text2"}>Send</label></button>
+        
+
+
         <div>
           <form className={"Box1"}>
 
@@ -57,33 +69,16 @@ class Home extends Component {
 
           </form>
         </div>
-        <textarea
+        <input
           className={"Encode64"}
           type="text"
           onChange={this.handleChange.bind(this)}
           id="baseStr64text"
           name="baseStr64text"
-        ></textarea>
+        ></input>
         <div className={"Backf"}>
           <div>
-            <div>
-              <div className={"Pr"}>
-                <FileBase64 multiple={true} onDone={this.getFiles.bind(this)} />
-              </div>
-              <div className="Box">
-                {this.state.files.map((file, i) => {
-                  return <img key={i} src={this.state.files[0].base64} />;
-                })}
-              </div>
-            </div>
 
-            <input
-            className={"Encode64"}
-              type="text"
-              
-              id="baseStr64text"
-              name="baseStr64text"
-            ></input>
 
             <div>
               <form className={"Box1"}>
@@ -100,10 +95,6 @@ class Home extends Component {
                 })}
               </form>
             </div>
-            <label className={"Text5"}>Base64 to Image</label>
-            <button className={"Copy"} type="submit">
-              <label className={"Text4"}>Copy</label>
-            </button>
             {this.state.files.length != 0 ? (
               <div>
                 <div

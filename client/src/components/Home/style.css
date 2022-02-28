@@ -1,6 +1,18 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    padding: 0;
+    margin: 0;
+  }
+
 .navbar {
     position: absolute;
-    width   : 1903px;
+    width   : 1920px;
     height  : 103px;
 
     background    : #4B4B4B;
@@ -22,11 +34,23 @@
     font-size  : 72px;
     line-height: 81px;
     color      : #FFDEDE;
-    left       : 36%;
+    left       : 41%;
     top        : 1%;
 
 
     mix-blend-mode: normal;
+}
+
+.Send{
+    position: absolute;
+    width   : 229px;
+    height  : 56px;
+
+    background    : #C4C4C4;
+    mix-blend-mode: overlay;
+    border-radius : 12px;
+    top: 810px;
+    left: 670px;
 }
 
 .Log {
@@ -73,21 +97,7 @@
     color: #000000;
 }
 
-.Text4 {
-    position: absolute;
-    width   : 57px;
-    height  : 26px;
 
-    font-family: Share;
-    font-style : normal;
-    font-weight: normal;
-    font-size  : 30px;
-    line-height: 34px;
-
-    color : #000000;
-    right : 35px;
-    bottom: 10px;
-}
 
 .Text5 {
     position: absolute;
@@ -158,19 +168,19 @@
 }
 
 .Box1 {
-    position: absolute;
-    width   : 1333px;
-    height  : 705px;
+    position  : absolute;
+    width     : 994px;
+    height    : 554px;
+    background: #FFFFFF;
+    border    : 10px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    top       : 150px;
+    left      : 500px;
 
-    background   : #C4C4C4;
-    border-radius: 8px;
-    top          : 1900px;
-    left         : 292px;
 }
 
 .Code64 {
-    position: absolute;
-
+    position: relative;
     width   : 1228px;
     height  : 222px;
     top     : 850px;
@@ -178,33 +188,20 @@
     outline : none;
     z-index : 0;
     resize  : none;
-    word-break: break-all;
-    overflow-y: scroll;
-    overflow-x: hidden;
+
     background: #FFFFFF;
-}
-
-.Line {
-    position: absolute;
-    width: 1565px;
-    height: 0px;
-    top: 1750px;
-    left: 170px;
-
-    border: 1px solid #000000;
-    transform: rotate(0.04deg)
-
 }
 
 .Encode64 {
     position: absolute;
-    width   : 1228px;
-    height  : 222px;
-    overflow-y: scroll;
-    word-break: break-all;
+    width   : 140px;
+    height  : 70px;
+    outline: none;
+
     background: #FFFFFF;
-    top       : 1400px;
-    left      : 346px;
+    top       : 800px;
+    left      : 920px;
+    padding: 0 20px;
 }
 
 .Line {
@@ -224,12 +221,19 @@
     box-sizing: 0;
 }
 
+input,
+input::-webkit-input-placeholder {
+    font-size: 25px;
+    line-height: 3;
+}
 .Backf {
 
-    width : 1903px;
-    height: 2700px;
+    width : 1920px;
+    height: 963px;
 
     background: url(C:\Users\maris\Desktop\backplusfront\projectUfanet\client\public\Backf.jpg);
+
+
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 
@@ -269,55 +273,4 @@
     border-radius: 8px;
     top          : 905px;
     left         : 1420px;
-}
-
-
-.custom-file-input {
-    color: transparent;
-}
-
-.custom-file-input::-webkit-file-upload-button {
-    visibility: hidden;
-}
-
-.custom-file-input::before {
-    content   : 'Выберите файл';
-    color     : black;
-    display   : inline-block;
-    background: #ACACAC;
-
-    box-sizing   : border-box;
-    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-
-    outline            : none;
-    white-space        : nowrap;
-    -webkit-user-select: none;
-    cursor             : pointer;
-    position           : absolute;
-    width              : 264px;
-    height             : 89px;
-
-    font-family : Share;
-    font-style  : normal;
-    font-weight : 500;
-    font-size   : 30px;
-    padding-top : 8%;
-    padding-left: 11%;
-
-
-    color: #000000;
-
-}
-
-.custom-file-input:hover::before {
-    border-color: black;
-}
-
-.custom-file-input:active {
-    outline: 0;
-}
-
-.custom-file-input:active::before {
-    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }

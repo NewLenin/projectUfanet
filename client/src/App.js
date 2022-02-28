@@ -8,6 +8,7 @@ import Home from './components/Home';
 import './App.css';
 
 
+
 import ReactDOM from 'react-dom';
 
 import FileBase64 from './react-file-base64.js';
@@ -30,6 +31,7 @@ class App extends Component {
       <Router>
 
         <Home/>
+
         
       </Router>
     )
